@@ -1,0 +1,24 @@
+{
+  "name": "twitter-clone",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Twitter Clone with React frontend and Node backend",
+  "main": "index.js",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "npm run dev --workspace=backend",
+    "client": "npm start --workspace=frontend",
+    "build": "npm run build --workspace=frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "concurrently": "^7.0.0"
+  },
+  "author": "Your Name",
+  "license": "ISC"
+}
